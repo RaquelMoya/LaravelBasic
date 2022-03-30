@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class PostSeeder extends Seeder
+class CommentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,10 +16,11 @@ class PostSeeder extends Seeder
     public function run()
     {
         for ($i = 0; $i < 10; $i++) {
-            DB::table('posts')->insert([
+            DB::table('comments')->insert([
                 'title' => Str::random(10),
                 'description' => Str::random(10),
-                'user_id' => 1
+                'user_id' => 1,
+                'post_id' => 1
             ]);
         }
     }
