@@ -19,7 +19,7 @@ class PostSeeder extends Seeder
             DB::table('posts')->insert([
                 'title' => Str::random(10),
                 'description' => Str::random(10),
-                'user_id' => 1
+                'user_id' => rand(1,10)
             ]);
         }
     }

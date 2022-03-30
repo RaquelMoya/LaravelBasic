@@ -19,8 +19,8 @@ class CommentSeeder extends Seeder
             DB::table('comments')->insert([
                 'title' => Str::random(10),
                 'description' => Str::random(10),
-                'user_id' => 1,
-                'post_id' => 1
+                'user_id' => rand(1,10),
+                'post_id' => rand(1,10)
             ]);
         }
     }

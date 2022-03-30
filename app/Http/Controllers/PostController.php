@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,6 +14,7 @@ class PostController extends Controller
     }
     public function findOne($id)
     {
+        $user = User::find($id);
         $post = Post::find($id);
         return $post;
     }
